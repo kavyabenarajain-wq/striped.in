@@ -21,8 +21,16 @@ const navObserver = new IntersectionObserver((entries) => {
 }, { rootMargin: "-50% 0px -50% 0px" });
 darkSections.forEach((s) => navObserver.observe(s));
 
-// ────────── cart ──────────
-const cart = [];
+// ────────── cart (persisted) ──────────
+const CART_KEY = "dc_cart";
+let cart = [];
+try {
+  const stored = JSON.parse(localStorage.getItem(CART_KEY) || "[]");
+  if (Array.isArray(stored)) cart = stored;
+} catch (_) {}
+function saveCart() {
+  try { localStorage.setItem(CART_KEY, JSON.stringify(cart)); } catch (_) {}
+}
 const cartCountEl = document.getElementById("cart-count");
 const cartItemsEl = document.getElementById("cart-items");
 const cartTotalEl = document.getElementById("cart-total");
@@ -40,7 +48,7 @@ function renderCart() {
       <li>
         <div>
           <div class="item-name">${it.name}</div>
-          <div class="item-meta">$${it.price}</div>
+          <div class="item-meta">₹${it.price}</div>
         </div>
         <button class="item-remove" data-idx="${i}">remove</button>
       </li>
@@ -52,7 +60,8 @@ function renderCart() {
       });
     });
   }
-  cartTotalEl.textContent = `$${cart.reduce((s, it) => s + it.price, 0)}`;
+  cartTotalEl.textContent = `₹${cart.reduce((s, it) => s + it.price, 0)}`;
+  saveCart();
 }
 
 function openCart() {

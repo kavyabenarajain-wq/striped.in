@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>dreamcloth — product</title>
+<meta name="description" content="dreamcloth — soft clothes for soft evenings." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body class="pdp-page">
+
+<!-- ──────── topbar ──────── -->
+<div class="topbar">
+  <div class="marquee-track">
+    <ul class="marquee-list">
+      <li>shipping worldwide</li><li>·</li>
+      <li>the pilot collection — ss · 26</li><li>·</li>
+      <li>30 day returns</li><li>·</li>
+      <li>made slowly, in a small studio</li><li>·</li>
+    </ul>
+    <ul class="marquee-list" aria-hidden="true">
+      <li>shipping worldwide</li><li>·</li>
+      <li>the pilot collection — ss · 26</li><li>·</li>
+      <li>30 day returns</li><li>·</li>
+      <li>made slowly, in a small studio</li><li>·</li>
+    </ul>
+  </div>
+</div>
+
+<!-- ──────── nav ──────── -->
+<header class="nav">
+  <a class="brand" href="index.html">dreamcloth</a>
+  <nav class="nav-c">
+    <a href="index.html#shop">shop</a>
+    <a href="index.html#world">our world</a>
+    <a href="lookbook.html">lookbook</a>
+  </nav>
+  <div class="nav-r">
+    <a href="#" class="nav-search">search</a>
+    <a href="#" class="cart-link">bag<span class="cart-count" id="cart-count">(0)</span></a>
+  </div>
+</header>
+
+<!-- ──────── pdp ──────── -->
+<section class="pdp">
+  <a href="index.html#shop" class="pdp-back">← back to shop</a>
+
+  <div class="pdp-grid">
+
+    <!-- ── images ── -->
+    <div class="pdp-media">
+      <div class="pdp-img" id="pdp-img-wrap">
+        <img id="pdp-img" src="" alt="" onload="this.classList.add('loaded')" onerror="this.style.display='none'" />
+      </div>
+    </div>
+
+    <!-- ── info ── -->
+    <div class="pdp-info">
+      <p class="eyebrow" id="pdp-eyebrow">— sku — / colorway —</p>
+      <h1 class="display pdp-title" id="pdp-title">Loading…</h1>
+      <p class="pdp-sub" id="pdp-sub"></p>
+      <p class="pdp-price" id="pdp-price"></p>
+      <p class="pdp-desc" id="pdp-desc"></p>
+
+      <div class="pdp-row">
+        <p class="eyebrow pdp-row-label">colorway</p>
+        <div class="pdp-cw" id="pdp-cw"></div>
+      </div>
+
+      <div class="pdp-row">
+        <p class="eyebrow pdp-row-label">size</p>
+        <div class="pdp-sizes" id="pdp-sizes">
+          <button data-size="XS">XS</button>
+          <button data-size="S" class="active">S</button>
+          <button data-size="M">M</button>
+          <button data-size="L">L</button>
+          <button data-size="XL">XL</button>
+        </div>
+      </div>
+
+      <button id="pdp-add" class="add pdp-add">add to bag</button>
+
+      <details class="pdp-acc" open>
+        <summary>Details</summary>
+        <ul class="pdp-details" id="pdp-details"></ul>
+      </details>
+      <details class="pdp-acc">
+        <summary>Care</summary>
+        <p>Cold wash, with similar colors. Air dry. Iron inside out on low. Loved softer over time.</p>
+      </details>
+      <details class="pdp-acc">
+        <summary>Shipping &amp; returns</summary>
+        <p>Ships worldwide in 3–7 business days. 30-day free returns on unworn pieces with tags. Final sale on intimates.</p>
+      </details>
+
+    </div>
+  </div>
+</section>
+
+<!-- ──────── you might also like ──────── -->
+<section class="pdp-related" id="pdp-related-section">
+  <p class="eyebrow">— you might also like —</p>
+  <div class="pdp-related-grid" id="pdp-related-grid">
+    <!-- injected by product.js -->
+  </div>
+</section>
+
+<!-- ──────── footer ──────── -->
+<footer class="foot">
+  <div class="foot-grid">
+    <div class="foot-brand">
+      <p class="display foot-mark"><em>dreamcloth</em></p>
+      <p class="foot-tag">soft clothes for soft evenings.</p>
+    </div>
+    <div class="foot-col">
+      <p class="eyebrow">shop</p>
+      <a href="index.html#shop">sleep shirts</a>
+      <a href="index.html#shop">sleep pants</a>
+      <a href="index.html#shop">camos</a>
+      <a href="index.html#shop">shorts</a>
+    </div>
+    <div class="foot-col">
+      <p class="eyebrow">studio</p>
+      <a href="index.html#world">our world</a>
+      <a href="lookbook.html">lookbook</a>
+      <a href="#">care</a>
+      <a href="#">contact</a>
+    </div>
+    <div class="foot-col">
+      <p class="eyebrow">elsewhere</p>
+      <a href="#">instagram</a>
+      <a href="#">tiktok</a>
+      <a href="#">pinterest</a>
+    </div>
+  </div>
+  <div class="foot-foot">
+    <span>© 2026 dreamcloth</span>
+    <span>the pilot collection — ss · 26</span>
+    <span>made slowly</span>
+  </div>
+</footer>
+
+<!-- ──────── cart drawer ──────── -->
+<aside id="cart" class="cart-panel" aria-hidden="true">
+  <div class="cart-head">
+    <p class="eyebrow">your bag</p>
+    <button class="cart-close" id="cart-close">close</button>
+  </div>
+  <ul class="cart-items" id="cart-items"></ul>
+  <div class="cart-foot">
+    <div class="cart-total"><span>total</span><span id="cart-total">₹0</span></div>
+    <button class="checkout">checkout</button>
+  </div>
+</aside>
+<div class="cart-scrim" id="cart-scrim"></div>
+
+<div id="toast" class="toast"></div>
+
+<script src="product.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
