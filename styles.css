@@ -749,6 +749,98 @@ img { display: block; max-width: 100%; }
 }
 
 /* ════════════════════════════════════════
+   ─── MOBILE ────────────────────────────
+   ════════════════════════════════════════ */
+
+@media (max-width: 700px) {
+  :root {
+    --topbar-h: 30px;
+    --nav-h: 56px;
+  }
+  .topbar .marquee-list li { font-size: 10px; letter-spacing: 0.18em; }
+
+  /* nav: trim to brand + bag only */
+  .nav { padding: 0 16px; }
+  .nav-c { display: none; }
+  .nav-search { display: none; }
+  .brand { font-size: 12px; letter-spacing: 0.2em; }
+  .nav-r { gap: 0; font-size: 11px; }
+
+  /* hero */
+  .hero-overlay { padding: 32px 20px; }
+  .hero-title { font-size: clamp(48px, 14vw, 84px); line-height: 0.95; }
+  .hero-title .italic { padding-left: clamp(8px, 4vw, 32px); }
+  .hero-eyebrow { font-size: 10px; letter-spacing: 0.2em; margin-bottom: 16px; }
+  .hero-scroll { right: 16px; bottom: 24px; font-size: 10px; }
+
+  /* world / intro */
+  .world { padding: 80px 20px; }
+  .world-display { font-size: clamp(36px, 11vw, 64px); }
+  .world-display .italic { padding-left: 14px; }
+  .world-lead { font-size: 18px; }
+
+  /* color section heads */
+  .cw { padding: 60px 20px; }
+  .section-head { padding-bottom: 28px; margin-bottom: 28px; }
+  .section-head .display { font-size: clamp(40px, 14vw, 80px); }
+  .section-head .display .italic { padding-left: 14px; }
+
+  /* products grid */
+  .product-info { padding-top: 14px; }
+  .product-info h3 { font-size: 20px; }
+  .price { font-size: 15px; }
+
+  /* marquee bands */
+  .band { padding: 20px 0; }
+  .band-text { font-size: clamp(36px, 12vw, 64px); }
+
+  /* lookbook page */
+  .lb-hero { padding: 80px 20px; min-height: 50vh; }
+  .lb-hero-title { font-size: clamp(44px, 13vw, 72px); }
+  .lb-hero-title .italic { padding-left: 14px; }
+  .lb-hero-sub { font-size: 16px; margin-top: 24px; }
+  .lb-edit { padding: 60px 20px; }
+  .lb-edit-grid { gap: 28px; }
+  .lb-edit-lead { font-size: clamp(28px, 9vw, 44px); }
+  .lb-edit-body { font-size: 15px; margin-bottom: 24px; }
+  .lb-trip { padding: 60px 20px; }
+  .lb-trip-head { margin-bottom: 32px; }
+  .lb-cta { padding: 80px 20px; }
+  .lb-cta-lead { font-size: clamp(40px, 12vw, 70px); }
+
+  /* PDP */
+  .pdp { padding: 24px 16px 60px; }
+  .pdp-back { margin-bottom: 24px; font-size: 11px; }
+  .pdp-grid { gap: 28px; }
+  .pdp-title { font-size: clamp(32px, 10vw, 56px) !important; }
+  .pdp-sub { font-size: 14px; margin-bottom: 14px; }
+  .pdp-price { font-size: 18px; margin-bottom: 22px; }
+  .pdp-desc { font-size: 15px; margin-bottom: 28px; }
+  .pdp-row { margin-bottom: 18px; }
+  .pdp-add { padding: 16px; font-size: 11px; margin: 4px 0 28px; }
+  .pdp-acc summary { padding: 14px 0; font-size: 11px; }
+  .pdp-related { padding: 60px 20px; }
+  .pdp-related-grid { gap: 14px; }
+
+  /* world grid: tighter side copy on phone */
+  .world-side { gap: 12px; }
+
+  /* footer */
+  .foot { padding: 50px 20px 24px; }
+  .foot-grid { margin-bottom: 50px; gap: 32px 24px; }
+  .foot-brand .foot-mark { font-size: 44px !important; }
+  .foot-foot { flex-direction: column; gap: 6px; font-size: 10px; }
+
+  /* cart drawer */
+  .cart-head { padding: 18px 20px; }
+  .cart-items { padding: 4px 20px; }
+  .cart-foot { padding: 16px 20px 22px; }
+}
+
+/* prevent any rogue horizontal scroll */
+html, body { overflow-x: hidden; max-width: 100%; }
+
+/* ════════════════════════════════════════
    ─── LOOKBOOK PAGE ────────────────────
    ════════════════════════════════════════ */
 
