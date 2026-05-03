@@ -65,7 +65,7 @@ const PRODUCTS = {
 
 const COLORWAYS = {
   blue: {
-    label: "Comforting Word / Dinner Party",
+    label: "the ubey collection",
     sku: "01",
     swatchA: "#94b5d4",
     swatchB: "#3d1f18",
@@ -78,7 +78,7 @@ const COLORWAYS = {
     stripeClass: "stripe-blue",
   },
   yellow: {
-    label: "Frozen Yogurt / Dinner Party",
+    label: "the buttery collection",
     sku: "02",
     swatchA: "#e6e2a0",
     swatchB: "#3d1f18",
@@ -91,7 +91,7 @@ const COLORWAYS = {
     stripeClass: "stripe-yellow",
   },
   pink: {
-    label: "Dream Sequence / Restaurant Cola",
+    label: "the redink collection",
     sku: "03",
     swatchA: "#efc4cb",
     swatchB: "#a02828",
@@ -106,9 +106,9 @@ const COLORWAYS = {
 };
 
 const COLORWAY_LABEL = {
-  blue: "Comforting Word",
-  yellow: "Frozen Yogurt",
-  pink: "Dream Sequence",
+  blue: "Ubey",
+  yellow: "Buttery",
+  pink: "Redink",
 };
 
 // ────────── parse URL ──────────
@@ -123,10 +123,10 @@ function render() {
   const product = PRODUCTS[type];
   const colorway = COLORWAYS[cw];
 
-  document.title = `${product.name} — ${COLORWAY_LABEL[cw]} · dreamcloth`;
+  document.title = `${product.name} — ${COLORWAY_LABEL[cw]} · striped`;
 
   const eyebrow = document.getElementById("pdp-eyebrow");
-  eyebrow.textContent = `— sku ${colorway.sku} · ${colorway.label} —`;
+  eyebrow.textContent = `— ${colorway.label} —`;
 
   document.getElementById("pdp-title").textContent = product.name;
   document.getElementById("pdp-sub").textContent = product.sub;
