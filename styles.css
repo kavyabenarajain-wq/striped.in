@@ -135,6 +135,7 @@ img { display: block; max-width: 100%; }
   font-size: 12px;
   letter-spacing: 0.22em;
   text-transform: uppercase;
+  white-space: nowrap;
 }
 .nav-r { justify-content: flex-end; }
 .nav a { position: relative; padding-bottom: 4px; }
@@ -752,19 +753,22 @@ img { display: block; max-width: 100%; }
    ─── MOBILE ────────────────────────────
    ════════════════════════════════════════ */
 
-@media (max-width: 700px) {
+@media (max-width: 820px) {
   :root {
     --topbar-h: 30px;
     --nav-h: 56px;
   }
   .topbar .marquee-list li { font-size: 10px; letter-spacing: 0.18em; }
 
-  /* nav: trim to brand + bag only */
-  .nav { padding: 0 16px; }
+  /* nav: brand left, bag right — center menu hidden, search hidden */
+  .nav {
+    padding: 0 16px;
+    grid-template-columns: 1fr 1fr;
+  }
   .nav-c { display: none; }
   .nav-search { display: none; }
-  .brand { font-size: 12px; letter-spacing: 0.2em; }
-  .nav-r { gap: 0; font-size: 11px; }
+  .brand { font-size: 12px; letter-spacing: 0.22em; }
+  .nav-r { gap: 0; font-size: 11px; letter-spacing: 0.22em; }
 
   /* hero */
   .hero-overlay { padding: 32px 20px; }
